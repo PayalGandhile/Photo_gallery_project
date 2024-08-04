@@ -102,8 +102,7 @@
     </section>
 
        <!-- contact us -->
-    <!-- to test git  -->
-       
+         
     <section>
         <div class="contact">
             <h2>Contact Us</h2>
