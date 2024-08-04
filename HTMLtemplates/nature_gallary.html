@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nature Photography Gallery</title>
+    <link rel="stylesheet" href="../styles/gallary.css">
+</head>
+<body>
+    <!-- navigation bar -->
+        <script>           
+            // Get the navigation bar HTML
+            fetch('navbar.html')
+            .then(response => response.text())
+            .then(html => {
+                // Append the navigation bar to the page
+                document.getElementById('nav-container').innerHTML = html;
+            });
+        </script>
+            <div id="nav-container"></div>
+
+        <section>
+            
+            <div class="wildlife">
+                <img src="./images/nature11.jpg" alt="wildlife" width="100%" height="500px">
+                <div class="imagecaption">Nature Photography Gallery</div>
+            </div>
+            <div class="info">
+                <h2>Welcome to my Nature Photography Gallery</h2>
+            </div>
+            <div class="information">
+                <P>
+                    Here, in this nature photography gallery, 
+                    you’ll find a curated collection of my nature images, 
+                    each one showcasing the unedited beauty and diversity of the natural world.
+
+                    I believe that colour photography has a magical quality that instantly
+                     captivates the senses and ignites the imagination. Through my lens,
+                     I strive to capture the essence of nature in its most authentic and 
+                     vibrant form.
+
+                    Whether you're an avid nature lover or simply someone who appreciates 
+                    the artistry of natural landscape photography, I hope you'll find 
+                    inspiration and tranquility in this full-colour collection.
+                </P>
+            </div>
+
+            <div class="container">
+                <div class="image-container">
+                    <img src="./images/nature2.jpg" alt="">
+                    <img src="./images/nature1.jpg" alt="">
+                    <img src="./images/nature3.jpg" alt="">
+                    <img src="./images/nature14.jpg" alt="">
+                    <img src="./images/nature5.jpg" alt="">
+                    <img src="./images/nature6.jpg" alt="">
+                    <img src="./images/nature4.jpg" alt="">
+                    <img src="./images/nature9.jpg" alt="">
+                    <img src="./images/nature10.jpg" alt="">
+                    <img src="./images/nature11.jpg" alt="">
+                    <img src="./images/nature12.jpg" alt="">
+                    <img src="./images/nature13.jpg" alt="">
+                    <img src="./images/nature8.jpg" alt="">
+                    <img src="./images/nature15.jpg" alt="">
+                    <img src="./images/nature16.jpg" alt="">
+                </div>
+                
+            </div>
+        </section>
+        <section>
+
+        </section>
+    
+</body>
+</html>

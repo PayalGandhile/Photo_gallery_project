@@ -1,0 +1,82 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    text-transform: capitalize;
+}
+body{
+    min-height: 100vh;
+    width: 100%;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+
+}
+header{
+    position: fixed;
+    top: 0;left: 0;right: 0;
+    background:#ffffff;
+    box-shadow: 0px 5px 10px rgba(0,0,0,0.1);
+    padding: 0px 5px;
+    display: flex;    
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+}
+header .logo{
+    font-weight: bolder;
+    font-size: 25px;
+    color: #333;
+    padding-left: 20px;
+}
+header .navlink{
+    list-style: none;
+}
+header .link{
+    position: relative; 
+    float: left;   
+}
+header .navbar ul li a{
+    font-size: 20px;
+    padding: 15px;
+    color: #333;
+    display: block;
+}
+header .navbar ul li a:hover{
+    background: #333;
+    color: #ffffff;
+}
+header .navbar ul li .dropdown {
+    position: absolute;
+    left: 0;
+    top: 100%;
+    background: #ffffff;
+    display: none;
+    min-width: 200px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+header .navbar ul li:hover .dropdown {
+    display: block;
+}
+
+header .navbar ul li .dropdown .drop {
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+header .navbar ul li .dropdown .drop a {
+    list-style: none;
+    padding: 10px 20px;
+}
+
+header .navbar ul li .dropdown .drop a:hover {
+    background: #333;
+    color: #ffffff;
+}
+
+
+
+

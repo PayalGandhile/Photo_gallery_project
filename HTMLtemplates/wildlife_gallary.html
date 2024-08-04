@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wildlife Photography Gallery</title>
+    <link rel="stylesheet" href="../styles/gallary.css">
+</head>
+<body>
+    <!-- navigation bar -->
+        <script>           
+            // Get the navigation bar HTML
+            fetch('navbar.html')
+            .then(response => response.text())
+            .then(html => {
+                // Append the navigation bar to the page
+                document.getElementById('nav-container').innerHTML = html;
+            });
+        </script>
+            <div id="nav-container"></div>
+
+        <section>
+            
+            <div class="wildlife">
+                <img src="./images/wildlife15.jpg" alt="wildlife" width="100%" height="500px">
+                <div class="imagecaption">Wildlife Photography Gallery</div>
+            </div>
+            <div class="info">
+                <h2>Welcome to my Wildlife Photography Gallery</h2>
+            </div>
+            <div class="information">
+                <P>Here, in this wildlife photography gallery, 
+                    you’ll find a curated collection of my wildlife images,
+                    each one showcasing an unedited realism of the natural world.
+
+                    I believe that colour photography has a magical quality that 
+                    instantly captivates the senses and ignites the imagination.
+                    
+                    Whether you're a seasoned wildlife enthusiast or simply someone 
+                    who appreciates the artistry of natural wildlife photography,
+                  I hope you'll find inspiration and joy in this full-colour collection.
+                </P>
+            </div>
+            <div class="container">
+                <div class="image-container">
+                    <img src="./images/wildlife5.jpg" alt="">
+                    <img src="./images/wildlife14.jpg" alt="">
+                    <img src="./images/wildlife1.jpg" alt="">
+                    <img src="./images/wildlife2.jpg" alt="">
+                    <img src="./images/wildlife3.jpg" alt="">
+                    <img src="./images/wildlife4.jpg" alt="">
+                    <img src="./images/wildlife6.jpg" alt="">
+                    <img src="./images/wildlife7.jpg" alt="">
+                    <img src="./images/wildlife8.jpg" alt="">
+                    <img src="./images/wildlife9.jpg" alt="">
+                    <img src="./images/wildlife10.jpg" alt="">
+                    <img src="./images/wildlife11.jpg" alt="">
+                    <img src="./images/wildlife12.jpg" alt="">
+                    <img src="./images/wildlife13.jpg" alt="">
+                    <img src="./images/wildlife15.jpg" alt="">
+                </div>
+                
+            </div>
+        </section>
+        <section>
+
+        </section>
+    
+</body>
+</html>
