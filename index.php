@@ -7,25 +7,18 @@
     <link rel="stylesheet" href="./styles/style.css">
 </head>
 <body>
-    <header>
-    <a href="#" class="logo"> Photo Gallary</a>
-    <nav class="navbar">
-    <ul class="navlink">
-        <li class="link"><a href="#">Home</a></li>
-        <li class="link"><a href="#">Categorise+</a>
-            <ul class="dropdown">
-                <li class="drop"><a  href="#"> Nature</a></li>
-                <li class="drop"><a  href="#"> Travel</a></li>
-                <li class="drop"><a  href="#"> Wildlife</a></li>
-                <li class="drop"><a  href="#"> Flower</a></li>
-            </ul>
-        </li>
-        <li class="link"><a href="#">About</a></li>
-        <li class="link"><a href="#">Contact us</a></li>
-    </ul>
-    </nav>
-    </header>
-
+     <!-- navigation bar -->
+     <script>           
+            // Get the navigation bar HTML
+            fetch('./HTMLtemplates/navbar.html')
+            .then(response => response.text())
+            .then(html => {
+                // Append the navigation bar to the page
+                document.getElementById('nav-container').innerHTML = html;
+            });
+        </script>
+            <div id="nav-container"></div>
+   
     <div class="slide-container">
         <div class="navigation">
             <div class="prev nav-btn">&lt;</div>
@@ -39,7 +32,7 @@
         </div>
         <div class="slides">
             <div class="item main">
-                <img src="./images/nature3.jpg" alt="Nature" />
+                <img src="./images/nature13.jpg" alt="Nature" />
                 <div class="caption">Nature</div>
             </div>
             <div class="item">
@@ -51,7 +44,7 @@
                 <div class="caption">Wildlife</div>
             </div>
             <div class="item">
-                <img src="./images/flower1.jpg" alt="Flower" />
+                <img src="./images/flower9.jpg" alt="Flower" />
                 <div class="caption">Flower</div>
             </div>          
         </div>
@@ -102,7 +95,7 @@
     </section>
 
        <!-- contact us -->
-         
+     <a id="contact">    
     <section>
         <div class="contact">
             <h2>Contact Us</h2>
@@ -122,9 +115,7 @@
         <button type="submit">Submit</button>
     </form>
     </section>
-    
-    
-    
+    </a>  
 </body>
 <script src="script.js"></script>
 </html>
