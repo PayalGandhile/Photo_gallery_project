@@ -15,68 +15,10 @@ body{
     scroll-behavior: smooth;
 
 }
-header{
-    position: fixed;
-    top: 0;left: 0;right: 0;
-    background:#ffffff;
-    box-shadow: 0px 5px 10px rgba(0,0,0,0.1);
-    padding: 0px 5px;
-    display: flex;    
-    align-items: center;
-    justify-content: space-between;
-    z-index: 1000;
-}
-header .logo{
-    font-weight: bolder;
-    font-size: 25px;
-    color: #333;
-    padding-left: 20px;
-}
-header .navlink{
-    list-style: none;
-}
-header .link{
-    position: relative; 
-    float: left;   
-}
-header .navbar ul li a{
-    font-size: 20px;
-    padding: 15px;
-    color: #333;
-    display: block;
-}
-header .navbar ul li a:hover{
-    background: #333;
-    color: #ffffff;
-}
-header .navbar ul li .dropdown {
-    position: absolute;
-    left: 0;
-    top: 100%;
-    background: #ffffff;
-    display: none;
-    min-width: 200px;
-    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
-}
 
-header .navbar ul li:hover .dropdown {
-    display: block;
-}
-
-header .navbar ul li .dropdown .drop {
-    border-top: 1px solid rgba(0, 0, 0, 0.1);
-}
-
-header .navbar ul li .dropdown .drop a {
-    padding: 10px 20px;
-}
-
-header .navbar ul li .dropdown .drop a:hover {
-    background: #333;
-    color: #ffffff;
-}
 
                     /* slider css  */
+
 .slide-container {
     position: relative;
     width: 100%;
@@ -127,6 +69,7 @@ header .navbar ul li .dropdown .drop a:hover {
     justify-content: center;
     gap: 8px;
     z-index: 0px;
+    
 }
 
 .indicator {
@@ -142,6 +85,10 @@ header .navbar ul li .dropdown .drop a:hover {
 .indicator:hover {
     background:black;
 }
+
+
+              /* slider css */
+
 
 .slides {
     width: 100%;
@@ -184,19 +131,19 @@ header .navbar ul li .dropdown .drop a:hover {
     color: white;
     padding: 10px 0;
 }
-                  /* gallary css */
-.gallary .img{
+                  /* gallery css */
+.gallery .img{
     margin-left: 30px;;
 }
 
-.gallary h2{
+.gallery h2{
  text-align: center;
  padding: 20px; 
  margin-top: 10px;   
  margin-bottom: 10px;
 }
 
- .gallary .img img{   
+ .gallery .img img{   
     width: 32%;
     height: 300px;
     padding-left: 20px;
@@ -256,3 +203,46 @@ header .navbar ul li .dropdown .drop a:hover {
     .contact-form button[type="submit"]:hover {
         background-color: #3e8e41;
     }
+
+       /* about us css */
+
+.container {
+    max-width: 100%;
+    margin: auto;
+    padding: 50px 100px;
+    /* line-height: 1.6; */
+    /* background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
+}
+.about{
+    text-align: center;
+    padding: 20px auto; 
+    margin: 30px 40px; 
+}
+
+.photo{
+    width: 30%;
+    height: 600px;
+    border: 2px solid white;
+    border-radius: 10px;
+    display:inline;
+    object-fit: cover;
+    float: left;
+}
+
+.info{
+    width: 60%;
+    float: left;
+    margin-left: 100px;
+    line-height:1.6 ;
+    letter-spacing: 0.5px;
+    word-spacing: 4px;
+}
+ 
+
+.photographer-photo {
+    max-width: 25%;
+    border-radius: 10%;
+    margin-bottom: 10px;
+    /* float: left; */
+}
