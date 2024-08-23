@@ -68,7 +68,7 @@ body{
     display: flex;
     justify-content: center;
     gap: 8px;
-    z-index: 0px;
+    z-index: 10;
     
 }
 
@@ -78,17 +78,13 @@ body{
     background: rgba(132, 131, 131, 0.55);
     border-radius: 50%;
     cursor: pointer;
-    transition: background 0.3s ease;
-}
+    transition: background 0.3s ease; 
+} 
 
 .indicator.active,
 .indicator:hover {
     background:black;
 }
-
-
-              /* slider css */
-
 
 .slides {
     width: 100%;

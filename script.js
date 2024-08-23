@@ -5,13 +5,16 @@ document.addEventListener('DOMContentLoaded', () => {
     const indicators = document.querySelectorAll('.indicator');
     const totalImages = images.length;
     let index = 0;
+    let autoplayInterval;
 
     prev.addEventListener('click', () => {
         changeImage('prev');
+        resetAutoplay();
     });
 
     next.addEventListener('click', () => {
         changeImage('next');
+        resetAutoplay();
     });
 
     indicators.forEach((indicator, i) => {
@@ -19,6 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
             index = i;
             updateIndicators();
             showImage(index);
+            resetAutoplay();
         });
     });
 
@@ -52,5 +56,27 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    function startAutoplay() {
+        autoplayInterval = setInterval(() => {
+            changeImage('next');
+        }, 3000); // Change slide every 3 seconds
+    }
+
+    function resetAutoplay() {
+        clearInterval(autoplayInterval);
+        startAutoplay();
+    }
+
+    // Pause autoplay on hover
+    document.querySelector('.slide-container').addEventListener('mouseover', () => {
+        clearInterval(autoplayInterval);
+    });
+
+    // Resume autoplay on mouse leave
+    document.querySelector('.slide-container').addEventListener('mouseleave', () => {
+        startAutoplay();
+    });
+
     showImage(index); // Show the initial image
+    startAutoplay(); // Start autoplay
 });
