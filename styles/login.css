@@ -1,68 +1,49 @@
-body{
+ body{
     display: flex;
     justify-content: center;
     align-items: center;
     margin-top: 80px;
-}
-.login{
-    border: 1px solid black;
-    width: 400px;
-    height: 500px;
-    background: url(../images/background5.jpg );
-    background-repeat: no-repeat;
-    background-size: 100% 100%;  
-    color: black;
-    border-radius: 13px;
-    box-shadow: 8px 8px 15px rgba(0,0, 0,0.75);
+ }
+ 
+.container h3{
+    text-align: center;
+    padding: 20px auto; 
+    margin-top: 30px;   
+    }
     
+.form {
+    max-width: 400px;
+    margin: 10px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+    align-items: center;
+    justify-content: center;
 }
-form{
-    display: block;
-    box-sizing: border-box;
-    padding: 40px;
-    width: 100%;
-    height: 100%;
-    flex-direction: column;
-    display: flex;
+    
+    
+.form input {
+    width: 90%;
+    height: 20px;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
 }
-h1{
-    font-weight: normal;
-    font-size: 34px;
-    margin-bottom: 60px;
-    text-shadow: 4px 4px 4px white;
-    text-align: justify;
-}
-label{
-    color:black;
-    font-size: 20px;
-    letter-spacing: 2px;
-    padding-left: 10px;
-}
-input{
-    background-color: rgba(255,255,255,0.3);
+    
+.form button[type="submit"] {
+    width: 95%;
     height: 40px;
-    line-height: 40px;
-    border-radius: 15px;
-    padding: 0px 20px;
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 10px;
     border: none;
-    margin-bottom: 20px;
-    color:black;
-    box-shadow: 3px 4px 4px white;
-}
-input:hover{
-    background: lightgrey;
-}
-button{
-    background-color: rgb(120, 238, 109);
-    height: 40px;
-    line-height: 40px;
-    border-radius: 15px;
-    border: none;
-    margin: 10px 0px;
-    box-shadow:3px 4px 4px white;
+    border-radius: 5px;
     cursor: pointer;
-    font-size: 15px;
+    margin-top: 10px;
 }
-button:hover{
-    background-color:rgb(83, 195, 72) ;
+    
+.form button[type="submit"]:hover {
+    background-color: #3e8e41;
 }
