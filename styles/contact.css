@@ -1,0 +1,49 @@
+/*contact us  */
+
+.contact{
+text-align: center;
+padding: 20px auto; 
+margin-top: 30px;   
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    /* border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.contact-form input[type="text"], .contact-form input[type="email"], .contact-form input[type="tel"] {
+    width: 100%;
+    height: 40px;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+.contact-form button[type="submit"] {
+    width: 100%;
+    height: 40px;
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.contact-form button[type="submit"]:hover {
+    background-color: #3e8e41;
+}
+
+.error{
+    color: red;
+}
