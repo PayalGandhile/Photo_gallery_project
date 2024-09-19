@@ -59,12 +59,14 @@ $conn->close();
 <body>
 
     <!-- Contact Us Section -->  
-    <section id="contact">
-        <div class="contact">
-            <h2>Contact Us</h2>
-        </div>
+    <section>
+    <div class="contact-page">
+        <span class="contact">
+            <h3>Contact Us</h3>
+        </span>
         
-        <form class="contact-form" method="post" action="contact.php">
+        
+        <form class="contact-form" method="post" action="contact.php" >
             <label for="name">Name:</label>
             <input type="text" id="name" name="name" placeholder="Enter Username" required>
             
@@ -78,7 +80,7 @@ $conn->close();
             <input type="tel" id="phone" name="phone" placeholder="Enter Number" required>
             <?php if (!empty($errors['phone'])): ?>
                 <div class="error"><?php echo $errors['phone']; ?></div>
-            <?php endif; ?>
+                <?php endif; ?>
 
             <button type="submit" name="submit">Submit</button>
 
@@ -87,9 +89,19 @@ $conn->close();
             <?php endif; ?>
             <?php if (!empty($success)): ?>
                 <div class="success"><?php echo $success; ?></div>
-            <?php endif; ?>
-        </form>
+                <?php endif; ?>
+            </form>
+            <div class="contact-info">
+                <h2>Why Connect with Us?</h2>
+                <ul>
+                    <li><strong>Exclusive Content</strong>: By joining us, you'll gain access to a curated selection of personal photography not available elsewhere.</li>
+                    <li><strong>Stay Updated</strong>: Get the latest updates on new photo releases, upcoming photography events, and behind-the-scenes stories directly in your inbox.</li>
+                    <li><strong>Personalized Communication</strong>: We value your input. Submit any photography inquiries, collaboration ideas, or feedback, and we'll get back to you personally.</li>
+                    <li><strong>Join Our Community</strong>: Become part of a growing community of photography enthusiasts who appreciate the art of unedited realism in nature.</li>
+                </ul>
+            </div>
+    </div>
     </section>
-
+        
 </body>
 </html>
