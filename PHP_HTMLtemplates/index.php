@@ -1,3 +1,13 @@
+<?php
+session_start(); // Start the session
+
+// Check if the user is logged in
+if (!isset($_SESSION["user"])) {
+    header("Location: login_form.php"); // Redirect to login page if not logged in
+    exit();
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,19 +16,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Photo Gallery</title>
     <link rel="stylesheet" href="../styles/style.css">
-    <!-- <script>
-        // Check session status via AJAX call to PHP
-        fetch('check_session.php')
-            .then(response => {
-                if (!response.ok) {
-                    window.location.href = 'login_form.php';
-                }
-            })
-            .catch(error => {
-                console.error('Error:', error);
-                window.location.href = 'login_form.php';
-            });
-    </script> -->
+    
 </head>
 
 <body>
@@ -143,7 +141,7 @@
                     <h1>About Us</h1>
                 </div>
                 <div class="photo">
-                    <img src="../images/background1.jpg" alt="" width="400px" height="500px">
+                    <a href="../images/background1.jpg"><img src="../images/background1.jpg" alt="" width="400px" height="500px"></a>
                 </div>
 
                 <div class="info">
@@ -161,7 +159,7 @@
             </p>
      -->
                     <h3>Meet the Photographer</h3>
-                    <img src="../images/photographer.jpg" alt="Photographer's Photo" class="photographer-photo">
+                    <a href="../images/photographer.jpg"><img src="../images/photographer.jpg" alt="Photographer's Photo" class="photographer-photo"></a>
                     <p><strong>[Payal Gandhile] - Photographer</strong></p>
                     <p>With a passion for exploring and capturing the world’s wonders, I have dedicated
                         myself to photographing nature, wildlife, travel destinations, and flowers.

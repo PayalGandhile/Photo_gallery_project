@@ -3,18 +3,19 @@
     max-width: 100%;
     margin: auto;
     line-height: 1.6; 
-    padding: 0%;
+    padding-top: 55px;
    
 }
 
 .contact{
     text-align: center;
-    font-size: 30px; 
+    font-size: 20px; 
+    padding:20px; 
 }
 
 .contact-form{
     /* max-width: 40%; */
-    margin: 25px;
+    margin: 50px 50px 50px 70px;
     padding: 20px;
     box-shadow: 10px 10px 10px rgba(17, 17, 17, 0.1);
     width: 40%;
@@ -66,9 +67,10 @@ label {
   }
 
 .contact-info{
-    margin-left: 50px;
-    width: 45%;
+    margin: 50px 0px 0px 30px;
+    width: 40%;
     float: left;
+    text-align: justify;
     line-height:1.8 ;
     letter-spacing: 0.6px;
     word-spacing: 5px;

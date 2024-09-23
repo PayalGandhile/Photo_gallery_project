@@ -33,7 +33,7 @@ if (isset($_POST["submit"])) {
             $success = "New contact form entry inserted successfully!";
             
             // Redirect to avoid form resubmission
-            header("Location: /Photo_gallery_project/HTMLtemplates/index.html");
+            header("Location:index.php");
             exit();
         } else {
             $errors['database'] = "Error: " . $stmt->error;
@@ -54,11 +54,26 @@ $conn->close();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us</title>
-    <link rel="stylesheet" href="./styles/contact.css">
+    <link rel="stylesheet" href="../styles/contact.css">
 </head>
 <body>
+ <!-- navigation bar -->
+ <script>           
+            // Get the navigation bar HTML
+            fetch('navbar.html')
+            .then(response => response.text())
+            .then(html => {
+                // Append the navigation bar to the page
+                document.getElementById('nav-container').innerHTML = html;
+            });
+        </script>
+            <div id="nav-container"></div>
+    
+
 
     <!-- Contact Us Section -->  
+    
+    
     <section>
     <div class="contact-page">
         <span class="contact">
@@ -92,7 +107,7 @@ $conn->close();
                 <?php endif; ?>
             </form>
             <div class="contact-info">
-                <h2>Why Connect with Us?</h2>
+                <h3>Why Connect with Us?</h3>
                 <ul>
                     <li><strong>Exclusive Content</strong>: By joining us, you'll gain access to a curated selection of personal photography not available elsewhere.</li>
                     <li><strong>Stay Updated</strong>: Get the latest updates on new photo releases, upcoming photography events, and behind-the-scenes stories directly in your inbox.</li>

@@ -1,16 +1,18 @@
 <?php
 session_start();
-if(isset($_SESSION["user"])){
-    header("Loction: ./HTMLtemplates/index.html");
+
+// Check if the user is already logged in
+if (isset($_SESSION["user"])) {
+    header("Location: ./index.php");
+    exit();
 }
-?>
-<?php
+
 include 'about.php';  // Include your database connection file
 
 $errors = array();
 $success = '';
 
-if(isset($_POST["submit"])) {
+if (isset($_POST["submit"])) {
     $name = htmlspecialchars($_POST["name"]);
     $email = htmlspecialchars($_POST["email"]);
     $password = $_POST["password"];
@@ -19,39 +21,42 @@ if(isset($_POST["submit"])) {
     $passwordHash = password_hash($password, PASSWORD_DEFAULT);
     
     // Validate password length
-    if(strlen($password) < 8){
+    if (strlen($password) < 8) {
         $errors['password'] = "Password must be at least 8 characters long";
     }
     
     // Validate password match
-    if($password !== $cpassword){
+    if ($password !== $cpassword) {
         $errors['cpassword'] = "Passwords do not match";
     }
 
-     // Check if email already exists
-     $stmt = $conn->prepare("SELECT id FROM user WHERE email = ?");
-     $stmt->bind_param("s", $email);
-     $stmt->execute();
-     $stmt->store_result();
-     
-     if($stmt->num_rows > 0){
-         $errors['email'] = "Email already exists. Please use a different email.";
-     }
-     $stmt->close();
+    // Check if email already exists
+    $stmt = $conn->prepare("SELECT id FROM user WHERE email = ?");
+    $stmt->bind_param("s", $email);
+    $stmt->execute();
+    $stmt->store_result();
+    
+    if ($stmt->num_rows > 0) {
+        $errors['email'] = "Email already exists. Please use a different email.";
+    }
+    $stmt->close();
 
     // If no errors, process registration
-    if(empty($errors)) {
+    if (empty($errors)) {
         // Prepare and bind
         $stmt = $conn->prepare("INSERT INTO user (name, email, password) VALUES (?, ?, ?)");
         $stmt->bind_param("sss", $name, $email, $passwordHash); // 'sss' indicates three strings
         
         // Execute the query
-        if($stmt->execute()){
+        if ($stmt->execute()) {
+            // Set user session upon successful registration
+            $_SESSION["user"] = $email; // Store user's email in session or use user ID
+            
             $success = "Registration successful!";
             $stmt->close(); // Close the statement
 
             // Redirect to avoid form resubmission
-            header("Location:login_form.php?success=1");
+            header("Location: login_form.php?success=1");
             exit(); 
         } else {
             $errors['general'] = "Error: " . $stmt->error;
@@ -67,7 +72,7 @@ $conn->close();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Register</title>
-    <link rel="stylesheet" href="./styles/login.css">
+    <link rel="stylesheet" href="../styles/login.css">
 </head>
 <body>
     <div class="container">
